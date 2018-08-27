@@ -30,7 +30,7 @@ Enemy.prototype.update = function(dt) {
     if (this.x < this.boundary) {
         //move forward
         //increment x by speed * dt
-        this.x += 200 * dt;
+        this.x += this.speed * dt;
     } else {
         this.x = this.resetPos;
     }
