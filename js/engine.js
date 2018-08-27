@@ -60,6 +60,7 @@ var Engine = (function(global) {
          */
         if (player.victory === true) {
              win.cancelAnimationFrame(id);
+             modal.classList.toggle('hide');
         } 
         else {
             win.requestAnimationFrame(main);
