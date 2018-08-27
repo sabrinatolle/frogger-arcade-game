@@ -94,6 +94,8 @@ switch(input) {
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 const player = new Hero();
+const bug1 = new Enemy();
+
 
 
 // This listens for key presses and sends the keys to your
