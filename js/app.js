@@ -72,6 +72,10 @@ update() {
     }
 }
 
+reset() {
+    this.y = this.startY;
+    this.x = this.startX;
+}
 // This class requires an update(), render() and
 // a handleInput() method.
 
