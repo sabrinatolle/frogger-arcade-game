@@ -50,7 +50,7 @@ class Hero {
         this.step = 101;
         this.jump = 83;
         this.startX = this.step * 2;
-        this.startY =( this.jump * 5) + 55; // padding to center hero
+        this.startY =( this.jump * 4) + 55; // padding to center hero
         this.x = this.startX;
         this.y = this.startY;
         
