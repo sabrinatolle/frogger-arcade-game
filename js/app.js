@@ -2,10 +2,10 @@
 
 
 // Enemies our player must avoid
-let Enemy = function(x,y) {
+let Enemy = function(x, y, speed) {
     this.x = x;
     this.y = y + 55; //center
-
+    this.speed = speed;
     
     
     // The image/sprite for our enemies
