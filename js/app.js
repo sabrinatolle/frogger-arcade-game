@@ -65,10 +65,10 @@ class Hero {
 update() {
     // check collision
     for(let enemy of allEnemies) {
-        if(this.y === enemy.y){
-            console.log('Same row!');
+        if(this.y === enemy.y && (enemy.x + enemy.step > this.x && enemy.x < this.x + this.step)){
+            console.log('Collide!');
         }
-        console.log(this.y, enemy.y);
+        //console.log(this.y, enemy.y);
     }
 }
 
