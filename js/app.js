@@ -70,6 +70,10 @@ update() {
         }
         //console.log(this.y, enemy.y);
     }
+    // check for win here
+    if(this.y === 55) {
+        console.log('winner!');
+    }
 }
 
 reset() {
