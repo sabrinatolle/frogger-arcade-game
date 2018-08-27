@@ -50,7 +50,7 @@ class Hero {
         this.step = 101;
         this.jump = 83;
         this.startX = this.step * 2;
-        this.startY =( this.jump * 5) - 20; // padding to center hero
+        this.startY =( this.jump * 5) + 55; // padding to center hero
         this.x = this.startX;
         this.y = this.startY;
         
@@ -62,7 +62,15 @@ class Hero {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
 
-
+update() {
+    // check collision
+    for(let enemy of allEnemies) {
+        if(this.y === enemy.y){
+            console.log('Same row!');
+        }
+        console.log(this.y, enemy.y);
+    }
+}
 
 // This class requires an update(), render() and
 // a handleInput() method.
