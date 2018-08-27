@@ -24,7 +24,8 @@ var Engine = (function(global) {
         ctx = canvas.getContext('2d'),
         lastTime;
         
-        
+        const modal = document.querySelector('.modal-bg');
+        const replay = document.querySelector('.modal-button');
 
     canvas.width = 505;
     canvas.height = 606;
