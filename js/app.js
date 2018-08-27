@@ -4,7 +4,7 @@
 // Enemies our player must avoid
 let Enemy = function() {
     this.x = 0;
-    this.y =0;
+    this.y = 55; //center
 
     
     
@@ -12,6 +12,7 @@ let Enemy = function() {
     this.sprite = 'images/enemy-bug.png';
     this.step = 101;
     this.boundary = this.step * 5;
+    this.resetPos = -this.step;
 };
 
 // Update the enemy's position, required method for game
@@ -31,7 +32,7 @@ Enemy.prototype.update = function(dt) {
         //increment x by speed * dt
         this.x += 200 * dt;
     } else {
-        this.x = 0;
+        this.x = this.resetPos;
     }
     //else
     //reset position to start
