@@ -95,6 +95,8 @@ switch(input) {
 // Place the player object in a variable called player
 const player = new Hero();
 const bug1 = new Enemy();
+const allEnemies = [];
+allEnemies.push(bug1);
 
 
 
