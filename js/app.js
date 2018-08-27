@@ -2,9 +2,9 @@
 
 
 // Enemies our player must avoid
-let Enemy = function() {
-    this.x = 0;
-    this.y = 55; //center
+let Enemy = function(x,y) {
+    this.x = x;
+    this.y = y + 55; //center
 
     
     
