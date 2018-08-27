@@ -109,9 +109,9 @@ switch(input) {
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 const player = new Hero();
-const bug1 = new Enemy();
-const bug2 = new Enemy();
-const bug3 = new Enemy();
+const bug1 = new Enemy(-101, 0);
+const bug2 = new Enemy(-101, 83);
+const bug3 = new Enemy((-101*2,5), 83);
 const allEnemies = [];
 allEnemies.push(bug1,bug2,bug3);
 console.log(allEnemies);
