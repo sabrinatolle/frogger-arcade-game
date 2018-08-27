@@ -53,6 +53,7 @@ class Hero {
         this.startY =( this.jump * 4) + 55; // padding to center hero
         this.x = this.startX;
         this.y = this.startY;
+        this.victory = false;
         
         
     }
@@ -72,7 +73,7 @@ update() {
     }
     // check for win here
     if(this.y === 55) {
-        console.log('winner!');
+       this.victory = true;
     }
 }
 
