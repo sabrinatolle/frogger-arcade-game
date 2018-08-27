@@ -58,29 +58,30 @@ class Hero {
         
     }
 
+    update() {
+        // check collision
+        for(let enemy of allEnemies) {
+            if(this.y === enemy.y && (enemy.x + enemy.step/2 > this.x && enemy.x < this.x + this.step/2)){
+               this.reset();
+            }
+            //console.log(this.y, enemy.y);
+        }
+        // check for win here
+        if(this.y === 55) {
+           this.victory = true;
+        }
+    }
+    
+
     render() 
 {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
 
-update() {
-    // check collision
-    for(let enemy of allEnemies) {
-        if(this.y === enemy.y && (enemy.x + enemy.step/2 > this.x && enemy.x < this.x + this.step/2)){
-           this.reset();
-        }
-        //console.log(this.y, enemy.y);
-    }
-    // check for win here
-    if(this.y === 55) {
-       this.victory = true;
-    }
-}
 
-reset() {
-    this.y = this.startY;
-    this.x = this.startX;
-}
+
+
+
 // This class requires an update(), render() and
 // a handleInput() method.
 
@@ -116,7 +117,12 @@ switch(input) {
     }
 
 }
-};
+//reset 
+reset() {
+    this.y = this.startY;
+    this.x = this.startX;
+   }
+}
 
 
 
@@ -131,7 +137,7 @@ const bug2 = new Enemy(-101, 83, 300);
 const bug3 = new Enemy((-101*2,5), 83, 300);
 const allEnemies = [];
 allEnemies.push(bug1,bug2,bug3);
-console.log(allEnemies);
+//console.log(allEnemies);
 
 
 
